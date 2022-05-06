@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Chicle&family=Oleo+Script&display=swap');
 html,body{
-  min-height: 100vh; 
+  height: 100vh; 
  /* height: calc(var(--vh, 1vh) * 100);*/
 }
 body{
@@ -20,7 +20,7 @@ body{
 h1{
     font-family: 'Chicle','Poppins', cursive;
     font-weight: 600;
-    font-size:60px;
+    font-size:2em;
 }
 h4{
   font-family: 'Oleo Script', cursive;
@@ -28,17 +28,18 @@ h4{
 }
 .main{
     height: 90vh; 
-    width: 100%;
+    width: 80vw;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+    margin: 0px auto;
 }
-.container{
+/*.container{
   margin-top:0px;
-}
+}*/
 .main .signup-wrapper{
-    width:890px;
+    width:100%;
     height: 100%;
     margin: 0px auto;
     background-color: white;
@@ -49,13 +50,12 @@ h4{
     background-size: contain;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    min-height: 100%;
+    height: 100%;
 
 }
 .welcome-wrapper .welcome-container{
-    min-height: 100%;
+    height: 100%;
     width: 100%;
-    
     padding :0px 40px;
     background-color: rgba(255,255,255,255,8);
     backdrop-filter: saturate(180%) blur(10px);
@@ -83,10 +83,10 @@ h4{
 .shop-description{
     width:100%;
     margin: 20px 0px;
-    font-size:1.2em;
+    font-size:1.1em;
 }
 .form-wrapper{
-  min-height:100%;
+  height:100%;
   width:100%;
   background-color: white;
   color:#4d2c91;
@@ -98,6 +98,7 @@ h4{
   align-items: center;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  overflow:scroll;
 }
 .form-wrapper header{
   margin-bottom:40px;
@@ -117,7 +118,6 @@ h4{
     margin: 20px auto;
     width:90%;
     height:100%;
-    align-self: center;
 }
 form .field{
     width: 100%;
