@@ -121,7 +121,10 @@ h4{
 }
 form .field{
     width: 100%;
-    margin: 15px 0px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-right:0px;
+    margin-left:0px;
     height:60px;
 }
 form .field.shake{
