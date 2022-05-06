@@ -27,7 +27,7 @@ h4{
   font-weight: 600;
 }
 .main{
-    height: 90vh; 
+    height: 95vh; 
     width: 80vw;
     display: flex;
     align-items: center;
@@ -91,19 +91,20 @@ h4{
   background-color: white;
   color:#4d2c91;
   text-align:center;
-  padding:20px 10px;
+  padding:0px 10px;
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  overflow:scroll;
+ /* overflow:scroll;*/
 }
-.form-wrapper header{
-  margin-bottom:40px;
+.form-wrapper form header{
+  margin-bottom:20px;
+  padding : 0px 0px;
 }
-.form-wrapper header .ts1{
+.form-wrapper form header .ts1{
   font-family: 'Chicle','Poppins', cursive;
   font-weight: 600;
   font-size:40px;
@@ -115,13 +116,12 @@ h4{
   font-family: 'Oleo Script', cursive;
 }
 .form-wrapper form{
-    margin: 20px auto;
     width:90%;
     height:100%;
 }
 form .field{
     width: 100%;
-    margin-bottom: 20px;
+    margin: 15px 0px;
     height:60px;
 }
 form .field.shake{
@@ -245,7 +245,7 @@ form .pass-txt{
 }
 form input[type="submit"]{
   height: 50px;
-  margin-top: 20px;
+  margin: 10px 0px;
   color: #fff;
   padding: 0;
   border: none;
@@ -281,9 +281,8 @@ form input[type="submit"]:hover{
 .login-container .form-wrapper form input[type="submit"]{
   height: 50px;
   width: 100%;
-  margin-top: 20px;
+  margin: 10px 0px;
   color: #fff;
-  padding: 0;
   border: none;
   background: #ab47bc;
   cursor: pointer;
