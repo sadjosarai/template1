@@ -275,17 +275,37 @@ form input[type="submit"]:hover{
 .login-container{
   background-color: white;
   border-radius: 5px;
-  width:560px;
-  min-height: 60vh;
+  width:360px;
+  height: 60vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
   /*height: calc(var(--vh, 1vh) * 60);*/
+}
+@media only screen and (max-width:360px){
+ .login-container{
+  width:98vw;
+ }
+}
+.login-container header{
+  margin-top:10px;
+  margin-bottom: 10px;
 }
 .login-container .form-wrapper{
   width:90%;
   height:100%;
+  margin: 0px auto;
+  display:flex;
+  justify-content: center;
+}
+.login-container .form-wrapper form{
+  padding-top:20px;
 }
 .login-container .form-wrapper .field{
-  width:90%;
-  height:50px;
+  width: 100%;
+  margin-top: 1.2vh;
+  margin-bottom: 0.8vh;
+  height:8vh;
 }
 .login-container .form-wrapper .ts1{
   margin-bottom:20px;
@@ -302,4 +322,7 @@ form input[type="submit"]:hover{
   cursor: pointer;
   border-bottom: 2px solid rgba(0,0,0,0.1);
   transition: all 0.3s ease;
+}
+.login-container .form-wrapper form input[type="submit"]:hover{
+  background: #4d2c91;
 }

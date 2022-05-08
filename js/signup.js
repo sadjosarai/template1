@@ -34,7 +34,6 @@ cpInput = cpField.querySelector("input");
 inputArray = form.querySelectorAll("input");
 form.onsubmit = (e)=>{
     e.preventDefault(); 
-    console.log(nInput + ' ' + lInput+' '+phInput+' '+eInput+' '+pInput+' '+cpInput);
     (nInput.value == "") ? nField.classList.add("shake", "error") : checkfName();
     (lInput.value == "") ? lField.classList.add("shake", "error") : checklName();
     (phInput.value == "") ? phField.classList.add("shake", "error") : checkPhone();
@@ -67,7 +66,7 @@ form.onsubmit = (e)=>{
       }
     }
     function checkPhone(){ 
-      let pattern = /[1-9]{9,12}$/; 
+      let pattern = /^[0-9]{9,12}$/; 
       if(!phInput.value.match(pattern)){ 
         phField.classList.add("error");
         phField.classList.remove("valid");
@@ -88,7 +87,6 @@ form.onsubmit = (e)=>{
       }
     }
     function checksex(){ 
-      console.log(sInput.value);
       if(sInput.value == ""){
         sField.classList.add("error");
         sField.classList.remove("valid");
@@ -143,9 +141,6 @@ form.onsubmit = (e)=>{
       confirmButtonText: 'ok'
     })
 }
-  if (!eField.classList.contains("error") && !pField.classList.contains("error")) {
-    (eInput.value === myusr && pInput.value === mypwd) ? redirect() : alertError();
-    }
   for(let item in inputArray ){
       if(item == ""){
           var ver=false;
@@ -153,6 +148,7 @@ form.onsubmit = (e)=>{
       }else{
           if(sInput == ""){
             ver=false;
+            break
           }
       }
   }
