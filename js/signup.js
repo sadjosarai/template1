@@ -2,10 +2,8 @@ window.addEventListener('resize', () => {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   });
-let screenWidth=screen.width;
-
-setInterval(() => {
-  if(screenWidth<=560){
+function resizing(){
+  if(window.innerHeight<=560){
     var main =document.querySelector(".main");
     var container = document.querySelector("body .container");
     main.style.width="100vw";
@@ -16,7 +14,8 @@ setInterval(() => {
     main.style.width="80vw";
     main.style.height="95vh";
   }
-}, 1000);
+}
+window.onresize=resizing;
 const form = document.querySelector("form");
 eField = form.querySelector(".email");
 eInput = eField.querySelector("input");
