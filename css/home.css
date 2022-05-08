@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Chicle&family=Oleo+Script&display=swap');
 html,body{
   height: 100vh; 
-  height: calc(var(--vh, 1vh) * 100);
+ /* height: calc(var(--vh, 1vh) * 100);*/
 }
 body{
     padding:unset;
