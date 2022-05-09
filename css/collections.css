@@ -118,8 +118,56 @@ body{
 /*--------------------------------------body section---------------------------------*/
 .body-wrapper{
     position:relative;
-    height: 68vh;
+    height: 100vh;
   }
+  .container{
+    height:100%;
+    width:100%;
+  }
+  .collection-details{
+    height:70%;
+    width:100%;
+    background-color:blue;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end;
+  }
+  #details{
+    height:100%;
+    width:30%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background-color:rgb(241, 240, 128);
+  }
+  #details .collection-name{
+    height: 15%;
+    width:100%;
+    background-color:rgb(73, 72, 11);
+  }
+  #details .collection-description{
+    height: 70%;
+    width:100%;
+    background-color:rgb(199, 196, 8);
+  }
+  #details .button-container{
+    height: 15%;
+    width:100%;
+    background-color:rgb(247, 245, 166);
+  }
+  .button-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  .collection-list{
+    height:30%;
+    width:100%;
+    overflow:scroll;
+    background-color:crimson;
+  }
+
 /*--------------------------------------footer section-------------------------------*/
 .footer-wrapper{
     min-height: 30vh;
@@ -153,6 +201,7 @@ body{
   .fab:hover{
     color:white;
     text-shadow: white;
+    cursor:pointer;
   }
   .link-section{
     height:60%;
