@@ -31,11 +31,12 @@ var collections=[
     },
 ]
 function fill(){
-    for(let col in collections){
+    for(let col of collections){
+        console.log(col.image);
         let e=document.createElement('div');
         e.classList.add('thumbnail');
-        e.style.backgroundImage.url=col.image;
+        e.style.backgroundImage="url('"+col.image+"')";
         document.querySelector('.collection-list').appendChild(e);
     }
 }
-window.onload(fill());
+window.onload=fill;
