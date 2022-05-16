@@ -139,6 +139,36 @@ html,body{
       width: 100%;
       background-color: burlywood;
       margin: 0px auto;
+      overflow: scroll;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+  .card{
+    margin:10px 20px;
+  }
+  .card img{
+    height: 180px;
+    width: 286px;;
+  }
+  .btn{
+    width:70%;
+    height: 50px;
+    color:white;
+    font-family: 'Oleo script';
+  }
+  .card a{
+    color:white;
+    font-family: 'Oleo script';
+    text-decoration: none;
+  }
+  .bg-ps{
+    background-color: #7e308b;
+    color:white;
+    font-family: 'Oleo script';
+  }
+  .bg-ps:hover{
+    background-color: #4d2c91;
   }
 /*--------------------------------------footer section-------------------------------*/
 .footer-wrapper{
