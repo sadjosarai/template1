@@ -31,14 +31,34 @@ var collections=[
     },
 ]
 function fill(){
+    let show=document.querySelector('.collection-details');
+    let name=document.querySelector('.collection-details #details .collection-name h2');
+    let desc=document.querySelector('.collection-details #details .collection-description p');
     for(let col of collections){
-        console.log(col.image);
         let e=document.createElement('div');
+        let h=document.createElement('h2');
+        let p=document.createElement('p');
+        h.innerText=col.name;
+        p.innerText=col.details;
+        p.style.display='none';
+        h.style.display='none';
+        e.appendChild(h);
+        e.appendChild(p);
         e.classList.add('thumbnail');
         e.style.backgroundImage="url('"+col.image+"')";
         e.style.backgroundSize="cover";
         e.style.cursor="pointer";
+        e.addEventListener('click', function(a){
+            let children=a.target.childNodes;
+            show.style.backgroundImage=a.target.style.backgroundImage;
+            name.innerText=children[0].innerText;
+            desc.innerText=children[1].innerText;
+        });
         document.querySelector('.collection-list').appendChild(e);
     }
+    show.style.backgroundImage="url('"+collections[0].image+"')";
+    show.style.backgroundSize="cover";
+    name.innerText=collections[0].name;
+    desc.innerText=collections[0].details;
 }
 window.onload=fill;

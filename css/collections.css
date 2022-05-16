@@ -7,7 +7,8 @@ html,body{
 body{
     padding:unset;
     margin: unset;
-    background-image: linear-gradient(to left bottom, #4d2c91, #ab47bc);
+    /*background-image: linear-gradient(to left bottom, #4d2c91, #ab47bc);*/
+    background-color: white;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -119,15 +120,17 @@ body{
 .body-wrapper{
     position:relative;
     height: 100vh;
+    padding-top: 7vh;
   }
   .container{
     height:100%;
     width:100%;
+    padding-top: 7vh;
   }
   .collection-details{
     height:70%;
     width:100%;
-    background-color:blue;
+    margin: 0px auto;
     display:flex;
     flex-direction:row;
     justify-content:flex-end;
@@ -139,31 +142,64 @@ body{
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    background-color:rgb(241, 240, 128);
+    background-color: rgba(250,205,200,0.4);
+    backdrop-filter: saturate(180%) blur(10px);
+  }
+  @supports(-webkit-backdrop-filter: none) or (backdrop-filter: none){
+    #details{
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba(250,205,200,0.4);
+    }
   }
   #details .collection-name{
-    height: 15%;
+    height: 30%;
     width:100%;
-    background-color:rgb(73, 72, 11);
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #details .collection-name h2{
+    font-size: 2em;
+    font-family: 'Bubblegum Sans', 'Chicle', 'Oleo Script';
   }
   #details .collection-description{
-    height: 70%;
+    height: 40%;
     width:100%;
-    background-color:rgb(199, 196, 8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #details .collection-description p{
+    text-align: center;
+    color:white;
   }
   #details .button-container{
-    height: 15%;
+    height: 30%;
     width:100%;
-    background-color:rgb(247, 245, 166);
   }
   .button-container{
     display:flex;
     justify-content:center;
     align-items:center;
   }
+  .button-container .btn{
+    width:70%;
+    height: 50px;
+    color:white;
+    font-family: 'Oleo script';
+  }
+  .bg-ps{
+    background-color: #7e308b;
+  }
+  .bg-ps:hover{
+    background-color: #4d2c91;
+  }
   .collection-list{
     height:30%;
     width:100%;
+    margin:0px auto;
     overflow:scroll;
     background-color:crimson;
     display:flex;
@@ -172,10 +208,14 @@ body{
     align-items: center;
   }
   .thumbnail{
-    border:1px solid white;
+    border:2px solid white;
     height:100%;
     width:300px;
     margin: 0px auto;
+  }
+  .thumbnail:hover{
+    box-shadow: 0px 0px 4px 3px white;
+    border:4px solid white;
   }
 
 /*--------------------------------------footer section-------------------------------*/
@@ -253,5 +293,37 @@ body{
   @media only screen and (max-width:560px){
     .userinfo{
       justify-content: center;
+    }
+  }
+  @media only screen  and (max-width:780px){
+    .container{
+      min-width:100%;
+      margin:0px auto;
+    }
+    .collection-details{
+      flex-direction:column;
+    }
+    #details{
+      height:50%;
+      width:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      background-color: rgba(250,205,200,0.4);
+      backdrop-filter: saturate(180%) blur(10px);
+    }
+    @supports(-webkit-backdrop-filter: none) or (backdrop-filter: none){
+      #details{
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+          background-color: rgba(250,205,200,0.4);
+      }
+    }
+    #details .collection-description{
+      padding:0px 20px;
+    }
+    #details .btn{
+      width:30%;
     }
   }
