@@ -60,8 +60,30 @@ let products=[
         purchase : 80,
     },
 ];
+let obj=[
+    {
+        image:"https://png.pngtree.com/png-clipart/20210416/ourmid/pngtree-summer-green-beach-items-png-image_3227691.jpg"
+    },
+    {
+        image:"https://png.pngtree.com/png-vector/20191114/ourmid/pngtree-set-of-realistic-glossy-metallic-balloons-png-image_1987616.png"
+    },
+    {
+        image:"https://png.pngtree.com/png-clipart/20210414/ourmid/pngtree-jesus-is-on-the-heavenly-day-png-image_3214721.jpg"
+    },
+    {
+        image:"https://png.pngtree.com/png-clipart/20210416/ourmid/pngtree-summer-green-beach-items-png-image_3227691.jpg"
+    },
+    {
+        image:"https://png.pngtree.com/png-vector/20191114/ourmid/pngtree-set-of-realistic-glossy-metallic-balloons-png-image_1987616.png"
+    },
+    {
+        image:"https://png.pngtree.com/png-clipart/20210414/ourmid/pngtree-jesus-is-on-the-heavenly-day-png-image_3214721.jpg"
+    },
+    
+]
 function fill(){
     let show=document.querySelector('.products-list');
+    let slide=document.querySelector('.glide__slides');
     for(let prod of products){
         let e=document.createElement('div');
         let i=document.createElement('img');
@@ -86,6 +108,15 @@ function fill(){
         e.appendChild(i);
         e.appendChild(d2);
         show.appendChild(e);
+    }
+    for(let i=0;i<6;i++){
+        let l=document.createElement('li');
+        l.classList.add('glide__slide');
+        let img=document.createElement('img');
+        img.src=obj[i].image;
+        img.alt='product '+i;
+        l.appendChild(img);
+        slide.appendChild(l);
     }
 }
 window.onload=fill;

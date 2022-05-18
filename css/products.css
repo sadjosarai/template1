@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Chicle&family=Oleo+Script&display=swap');
 html,body{
     height: 100vh; 
    /* height: calc(var(--vh, 1vh) * 100);*/
@@ -131,8 +133,28 @@ html,body{
   .glyder{
       height: 35%;
       width: 100%;
-      background-color: beige;
       margin: 0px auto;
+  }
+  .glide{
+    height:100%;
+  }
+  .glide__slide {
+    height:100%;
+    width:20rem;
+    margin: 0;
+  }
+  .glide__track{
+    height:100%;
+    width: 100%;
+  }
+  .glyder .glide .glide__track ul.glide__slides{
+    height: 100%;
+    width: 100px;
+    margin:0px auto;
+  }
+  .glide__slide img{
+    height:100%;
+    width:100%;
   }
   .products-list{
       height: 65%;
@@ -145,27 +167,29 @@ html,body{
       justify-content: space-between;
   }
   .card{
-    margin:10px 20px;
+    margin:10px 10px;
   }
   .card img{
-    height: 180px;
-    width: 286px;;
+    height: 16rem;
+    width: 19rem;;
+    margin:0px auto;
   }
-  .btn{
-    width:70%;
+  .card a.btn{
+    color:white;
+    font-family: 'Oleo script';
+    font-size: 1.3em;
+    width:150px;
     height: 50px;
-    color:white;
-    font-family: 'Oleo script';
-  }
-  .card a{
-    color:white;
-    font-family: 'Oleo script';
     text-decoration: none;
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 10px;
+  }
+  .card a.btn:hover{
+    color:white;
   }
   .bg-ps{
     background-color: #7e308b;
-    color:white;
-    font-family: 'Oleo script';
   }
   .bg-ps:hover{
     background-color: #4d2c91;
