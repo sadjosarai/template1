@@ -82,8 +82,11 @@ let obj=[
     
 ]
 function fill(){
+    let glide=document.querySelector('.glide__track');
     let show=document.querySelector('.products-list');
-    let slide=document.querySelector('.glide__slides');
+    let ul=document.createElement('ul');
+    ul.classList.add('glide__slides');
+    ul.style.width="100%";
     for(let prod of products){
         let e=document.createElement('div');
         let i=document.createElement('img');
@@ -116,7 +119,25 @@ function fill(){
         img.src=obj[i].image;
         img.alt='product '+i;
         l.appendChild(img);
-        slide.appendChild(l);
+        ul.appendChild(l);
+        glide.appendChild(ul);
     }
+    new Glide('.multi1', {
+        type: 'carousel',
+        autoplay: 2500,
+        perView: 3,
+        breakpoints: {
+            600: {
+                perView: 1
+            },
+            900: {
+                perView: 2
+            },
+            1200: {
+                perView: 3
+            }
+        }
+        }).mount();
+    
 }
 window.onload=fill;
