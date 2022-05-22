@@ -168,6 +168,30 @@ html,body{
   .card{
     margin:10px 10px;
   }
+  .card-title,
+  .card-purchase-wrapper,
+  .card-title h5,
+  .card-title .price{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .price{
+    padding:10px 10px;
+  }
+  .card-purchase-wrapper input{
+    height: 50px;
+    width: 100px;
+    border-top:none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #7e308b;
+    outline:none;
+  }
+  .card-title h5{
+    font-size:1.2em;
+  }
   .card img{
     height: 16rem;
     width: 19rem;;

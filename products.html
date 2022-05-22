@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="css/products.css">
 </head>
 <body>
-    <div class="main-container">
+    <div class="main-container" id="app">
         <header class="header-wrapper">
             <div class="header">
                 <div class="userbar-wrapper">
@@ -131,5 +131,21 @@
     <script src="js/bootstrap.bundle.js"></script>
     <script src="js/products.js"></script>
     <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script src="htpps://unpkg.com/vue@next"></script>
+    <script>
+        let app=Vue.createApp({
+            data(){
+                return {
+                    
+                }
+            },
+            methods:{
+                addToCart(){
+
+                }
+            }
+        })
+        app.mount('#app')
+    </script>
 </body>
 </html>
