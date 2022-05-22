@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Chicle&family=Oleo+Script&display=swap');
 html,body{
     height: 100vh; 
    /* height: calc(var(--vh, 1vh) * 100);*/
@@ -126,46 +128,111 @@ html,body{
     padding-top: 7vh;
     padding-right: 0px;
     padding-left: 0px;
-    background-color:rgb(11, 37, 29);
   }
   .glyder{
       height: 35%;
       width: 100%;
-      background-color: beige;
       margin: 0px auto;
+  }
+  .glide{
+    height:100%;
+  }
+  .glide__slide {
+    height:100%;
+    width:20rem;
+    margin: 0;
+  }
+  .glide__track{
+    height:100%;
+    width: 100%;
+  }
+  .glyder .glide .glide__track ul.glide__slides{
+    height: 100%;
+    width: 100px;
+    margin:0px auto;
+  }
+  .glide__slide img{
+    height:100%;
+    width:100%;
   }
   .products-list{
       height: 65%;
       width: 100%;
-      background-color: burlywood;
+      background-color: #7e308b;
       margin: 0px auto;
       overflow: scroll;
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
   }
   .card{
+    margin:10px 10px;
+  }
+  .card-title,
+  .card-purchase-wrapper,
+  .card-title h5,
+  .card-title .price{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .chart-button{
+    position:absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    height: 70px;
+    width:70px;
+    border-radius:50%;
+    color:white;
+    background-color: #7e308b;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.315);
     margin:10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .chart-button:hover{
+    background-color: #4d2c91;
+  }
+  .price{
+    padding:10px 10px;
+  }
+  .card-purchase-wrapper input{
+    height: 50px;
+    width: 100px;
+    border-top:none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #7e308b;
+    outline:none;
+  }
+  .card-title h5{
+    font-size:1.2em;
   }
   .card img{
-    height: 180px;
-    width: 286px;;
+    height: 16rem;
+    width: 19rem;;
+    margin:0px auto;
   }
-  .btn{
-    width:70%;
+  .card a.btn{
+    color:white;
+    font-family: 'Oleo script';
+    font-size: 1.3em;
+    width:150px;
     height: 50px;
-    color:white;
-    font-family: 'Oleo script';
-  }
-  .card a{
-    color:white;
-    font-family: 'Oleo script';
     text-decoration: none;
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 10px;
+  }
+  .card a.btn:hover{
+    color:white;
   }
   .bg-ps{
     background-color: #7e308b;
-    color:white;
-    font-family: 'Oleo script';
   }
   .bg-ps:hover{
     background-color: #4d2c91;
