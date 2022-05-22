@@ -248,6 +248,11 @@ form .pass-txt{
   text-align: left;
   margin-top: -10px;
   font-size: 0.7em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 .form-wrapper a{
   color: #5372F0;
