@@ -128,7 +128,6 @@ html,body{
     padding-top: 7vh;
     padding-right: 0px;
     padding-left: 0px;
-    background-color:rgb(11, 37, 29);
   }
   .glyder{
       height: 35%;
@@ -159,15 +158,59 @@ html,body{
   .products-list{
       height: 65%;
       width: 100%;
-      background-color: burlywood;
+      background-color: #7e308b;
       margin: 0px auto;
       overflow: scroll;
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
   }
   .card{
     margin:10px 10px;
+  }
+  .card-title,
+  .card-purchase-wrapper,
+  .card-title h5,
+  .card-title .price{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .chart-button{
+    position:absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    height: 70px;
+    width:70px;
+    border-radius:50%;
+    color:white;
+    background-color: #7e308b;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.315);
+    margin:10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .chart-button:hover{
+    background-color: #4d2c91;
+  }
+  .price{
+    padding:10px 10px;
+  }
+  .card-purchase-wrapper input{
+    height: 50px;
+    width: 100px;
+    border-top:none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #7e308b;
+    outline:none;
+  }
+  .card-title h5{
+    font-size:1.2em;
   }
   .card img{
     height: 16rem;
