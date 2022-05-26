@@ -1,21 +1,3 @@
-window.addEventListener('resize', () => {
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-  });
-function resizing(){
-  if(window.innerHeight<=560){
-    var main =document.querySelector(".main");
-    var container = document.querySelector("body .container");
-    main.style.width="100vw";
-    main.style.height="100vh";
-    container.style.width="100%";
-    container.style.margin="0px 0px";
-  }else{
-    main.style.width="80vw";
-    main.style.height="95vh";
-  }
-}
-window.onresize=resizing;
 const form = document.querySelector("form");
 eField = form.querySelector(".email");
 eInput = eField.querySelector("input");
@@ -40,7 +22,7 @@ form.onsubmit = (e)=>{
     (eInput.value == "") ? eField.classList.add("shake", "error") : checkEmail();
     (pInput.value == "") ? pField.classList.add("shake", "error") : checkPass();
     (cpInput.value == "") ? cpField.classList.add("shake", "error") : checkcorr();
-    (sInput.value == " ") ? sField.classList.add("shake", "error") : checksex();
+    (sInput.value == "") ? sField.classList.add("shake", "error") : checksex();
     
     setTimeout(()=>{
       eField.classList.remove("shake");
@@ -53,6 +35,11 @@ form.onsubmit = (e)=>{
     }, 500);
     eInput.onkeyup = ()=>{checkEmail();} 
     pInput.onkeyup = ()=>{checkPass();} 
+    lInput.onkeyup = ()=>{checkfName();} 
+    pInput.onkeyup = ()=>{checklName();} 
+    phInput.onkeyup = ()=>{checkPhone();} 
+    cpInput.onkeyup = ()=>{checkcorr();} 
+    sInput.onkeyup = ()=>{checksex();} 
     function checkEmail(){ 
       let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; 
       if(!eInput.value.match(pattern)){ 
@@ -66,7 +53,7 @@ form.onsubmit = (e)=>{
       }
     }
     function checkPhone(){ 
-      let pattern = /^[0-9]{9,12}$/; 
+      let pattern = /^+[ ][0-9]{9,12}$/; 
       if(!phInput.value.match(pattern)){ 
         phField.classList.add("error");
         phField.classList.remove("valid");
@@ -117,6 +104,8 @@ form.onsubmit = (e)=>{
       if(cpInput.value == "" || cpInput.value !== pInput.value){
         cpField.classList.add("error");
         cpField.classList.remove("valid");
+        let errorTxt = cpField.querySelector(".error-txt");
+        (cpInput.value !== pInput.value ) ? errorTxt.innerText = "password should be the same" : errorTxt.innerText = "this field can't be blank";
       }else{ 
         cpField.classList.remove("error");
         cpField.classList.add("valid");
@@ -125,7 +114,7 @@ form.onsubmit = (e)=>{
   function redirect() {
     Swal.fire({
       title: 'good!',
-      text: 'Welcome back dear user, you will now be redirected to your profile page',
+      text: 'Thank you for registering, you will now be redirected',
       icon: 'success',
       confirmButtonText: 'ok'
     }).then(() => {
@@ -133,6 +122,7 @@ form.onsubmit = (e)=>{
     })
       
   }
+  /*
   function alertError() {
     Swal.fire({
       title: 'Error!',
@@ -141,13 +131,14 @@ form.onsubmit = (e)=>{
       confirmButtonText: 'ok'
     })
 }
+*/
   for(let item in inputArray ){
-      if(item == ""){
+      if(item == "" || sInput == ""){
           var ver=false;
           break
       }else{
-          if(sInput == ""){
-            ver=false;
+          if(item !== "" || sInput !== ""){
+            ver=true;
             break
           }
       }

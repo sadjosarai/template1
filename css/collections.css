@@ -115,7 +115,7 @@ body{
   text-align:center;
 }
 #navbarNav a:hover{
-  color : white;
+  color : rgb(51, 27, 117);
 }
 #navbarNav li{
   margin: 5px 10px;

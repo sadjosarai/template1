@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Chicle&family=Oleo+Script&display=swap');
 html,body{
   min-height: 100vh; 
- /* height: calc(var(--vh, 1vh) * 100);*/
 }
 body{
     padding:0px 0px;
@@ -42,13 +41,11 @@ h4{
     padding:0px 0px;
   }
   .container{
+    margin: 0px 0px;
     padding:0px 0px;
   }
   
 }
-/*.container{
-  margin-top:0px;
-}*/
 .main .signup-wrapper{
     width:100%;
     height: 100%;
@@ -57,7 +54,7 @@ h4{
     border-radius:5px;
 }
 .welcome-wrapper{
-    background-image: url("/assets/img/make.jpg");
+    background-image: url("../assets/img/make.jpg");
     background-size: contain;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -287,7 +284,7 @@ form input[type="submit"]:hover{
   justify-content: center;
   /*height: calc(var(--vh, 1vh) * 60);*/
 }
-@media only screen and (max-width:360px){
+@media only screen and (max-width:400px){
  .login-container{
   width:98vw;
  }
@@ -335,3 +332,4 @@ form input[type="submit"]:hover{
 .login-container .form-wrapper form input[type="submit"]:hover{
   background: #4d2c91;
 }
+/*---------------------------------- bootstrap ---------------------------------------*/
