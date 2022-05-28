@@ -1,3 +1,4 @@
+//import {inputArray as dataForm, sInput as sexInput, ver as signedUp } from './modules/signup.js';
 let products=[
     {
         name : "Product 1",
@@ -101,6 +102,7 @@ let obj=[
     },
     
 ]
+
 function fill(){
     let glide=document.querySelector('.glide__track');
     let show=document.querySelector('.products-list');
@@ -175,6 +177,5 @@ function fill(){
             }
         }
         }).mount();
-    
 }
 window.onload=fill;

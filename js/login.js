@@ -4,13 +4,13 @@ window.addEventListener('resize', () => {
 });
 const form = document.querySelector("form");
 var mypwd="123456789";
-var myusr="sgi@user.com"
-eField = form.querySelector(".email"),
-eInput = eField.querySelector("input"),
-pField = form.querySelector(".password"),
-pInput = pField.querySelector("input");
+var myusr="sgi@user.com";
+let eField = form.querySelector(".email");
+let eInput = eField.querySelector("input");
+let pField = form.querySelector(".password");
+let pInput = pField.querySelector("input");
 form.onsubmit = (e)=>{
-    e.preventDefault(); 
+    e.preventDefault();
     (eInput.value == "") ? eField.classList.add("shake", "error") : checkEmail();
     (pInput.value == "") ? pField.classList.add("shake", "error") : checkPass();
     setTimeout(()=>{
@@ -19,14 +19,14 @@ form.onsubmit = (e)=>{
     }, 500);
     eInput.onkeyup = ()=>{checkEmail();} 
     pInput.onkeyup = ()=>{checkPass();} 
-    function checkEmail(){ 
-      let pattern1 = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; 
-      let pattern2 = /^[0-9]{9,12}$/;
-      if(!eInput.value.match(pattern1) || !eInput.value.match(pattern2)){ 
+    function checkEmail(){
+      let pattern1 = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      let pattern2 = /^\+[ ][0-9]{9,12}$/;
+      if(!eInput.value.match(pattern1) || !eInput.value.match(pattern2)){
         eField.classList.add("error");
         eField.classList.remove("valid");
         let errorTxt = eField.querySelector(".error-txt");
-        (eInput.value != "") ? errorTxt.innerText = "Enter a valid email address" : errorTxt.innerText = "Email can't be blank";
+        (eInput.value != "") ? errorTxt.innerText = "Enter a valid username address" : errorTxt.innerText = "Email can't be blank";
       } else {
         eField.classList.remove("error");
         eField.classList.add("valid");
