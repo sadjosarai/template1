@@ -319,6 +319,20 @@ html,body{
     .userinfo{
       justify-content: center;
     }
+    .glyder{
+      height: 0px;
+      transition: 0,3s;
+    }
+    .products-list{
+      height: 100%;
+      width: 100%;
+      background-color: #7e308b;
+      margin: 0px auto;
+      overflow: scroll;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+  }
   }
   @media only screen  and (max-width:780px){
     .container{

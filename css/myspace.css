@@ -124,7 +124,6 @@ html,body{
     height: 80vh;
     margin-top:8vh;
     margin-bottom: 25vh;
-    
   }
   .main{
     height: 100%;
@@ -246,6 +245,11 @@ html,body{
       margin:1em 2em;
     }
 
+  }
+  @media only screen and (max-width:360px) {
+    .link-box{
+      width:95%;
+    }
   }
   /*------------------------------------- footer -----------------------------------------*/
   .footer-wrapper{
