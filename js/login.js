@@ -22,7 +22,7 @@ form.onsubmit = (e)=>{
     function checkEmail(){
       let pattern1 = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
       let pattern2 = /^\+[ ][0-9]{9,12}$/;
-      if(!eInput.value.match(pattern1) || !eInput.value.match(pattern2)){
+      if(!eInput.value.match(pattern1) && !eInput.value.match(pattern2)){
         eField.classList.add("error");
         eField.classList.remove("valid");
         let errorTxt = eField.querySelector(".error-txt");

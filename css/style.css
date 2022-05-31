@@ -106,7 +106,6 @@ h4{
   align-items: center;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
- /* overflow:scroll;*/
 }
 .form-wrapper form header{
   margin-bottom:20px;
@@ -133,7 +132,7 @@ form .field{
     margin-bottom: 0.8vh;
     margin-right:0px;
     margin-left:0px;
-    height:8vh;
+    height:60px;
 }
 form .field.shake{
     animation: shake 0.3s ease-in-out;
@@ -150,7 +149,7 @@ form .field.shake{
     }
 }
 form .field .input-area{
-    height: 6vh;
+    height: 90%;
     width: 100%;
     position: relative;
   }
@@ -231,7 +230,7 @@ form .field .error-txt{
   color: #dc3545;
   text-align: left;
   margin-top: 1px;
-  font-size: 0.4em;
+  font-size: 0.8em;
 }
 form .field .error{
   display: none;
@@ -243,7 +242,7 @@ form .field.error .error{
 }
 form .pass-txt{
   text-align: left;
-  margin-top: 10px;
+  margin-top: 5px;
   font-size: 1em;
   display: flex;
   flex-direction: row;
@@ -261,7 +260,7 @@ form .pass-txt{
 }
 form input[type="submit"]{
   height: 50px;
-  margin: 10px 0px;
+  margin: 5px 0px;
   color: #fff;
   padding: 0;
   border: none;
@@ -277,16 +276,15 @@ form input[type="submit"]:hover{
 .login-container{
   background-color: white;
   border-radius: 5px;
-  width:30rem;
-  height: 60vh;
+  width:400px;
+  height: 500px;
   display:flex;
   flex-direction: column;
   justify-content: center;
-  /*height: calc(var(--vh, 1vh) * 60);*/
 }
-@media only screen and (max-width:400px){
+@media only screen and (max-width:500px){
  .login-container{
-  width:98vw;
+  width:98%;
  }
 }
 .login-container .form-wrapper header{
@@ -294,7 +292,7 @@ form input[type="submit"]:hover{
   justify-content: center;
   align-items: center;
   margin-top:10px;
-  font-size: 2.2em;
+  font-size: 2em;
 }
 .login-container .form-wrapper{
   width:90%;
@@ -308,20 +306,20 @@ form input[type="submit"]:hover{
 }
 .login-container .form-wrapper .field{
   width: 100%;
-  margin-top: 1.2vh;
-  margin-bottom: 0.8vh;
-  height:9vh;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  height:60px;
   font-size:1.2em ;
 }
 .login-container .form-wrapper .ts1{
   margin-bottom:20px;
-  font-size:40px;
+  font-size:2em;
   font-family: 'Bubblegum Sans', 'Poppins', 'Oleo Script', 'chicle', cursive;
 }
 .login-container .form-wrapper form input[type="submit"]{
   height: 50px;
   width: 100%;
-  margin: 10px 0px;
+  margin: 5px 0px;
   color: #fff;
   border: none;
   background: #ab47bc;
