@@ -62,3 +62,19 @@ function fill(){
     desc.innerText=collections[0].details;
 }
 window.onload=fill;
+let cart=document.querySelector(".chart");
+document.querySelector(".chart-button").onclick=(e)=>{
+    e.preventDefault();
+    if(cart.style.width!="0px"){
+        cart.style.width="0px";
+    }else{
+        if(window.innerWidth<="360"){
+            cart.style.width="100%";
+        }else{
+            cart.style.width="360px";
+        }
+    }
+};
+document.querySelector('#close-btn').onclick=()=>{
+    cart.style.width="0px";
+};
