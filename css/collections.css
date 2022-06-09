@@ -203,11 +203,9 @@ body{
     padding-top: 7vh;
   }
   .collection-details{
-    height:70%;
-    width:100%;
-    margin: 0px auto;
+    height:100%;
     display:flex;
-    flex-direction:row;
+    flex-direction:column;
     justify-content:flex-end;
   }
   #details{
@@ -376,7 +374,10 @@ body{
       margin:0px auto;
     }
     .collection-details{
-      flex-direction:column;
+      height:70%;
+    }
+    .collection-list{
+      height:30%;
     }
     #details{
       height:50%;
