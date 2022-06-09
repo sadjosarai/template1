@@ -24,7 +24,8 @@ let products=[
         details:"nshgk zjhdj hzdhkjz kb , jkjghdejdh  jzdh kj  by nya naya nya hkdbjdbfefkefb kdfdk fbe kjdfk dfjefkjf kjdf djh df j",
         purchase : 10,
         price :12,
-        quantity : 25
+        quantity : 25,
+        collections: ''
     },
     {
         name : "Product 2",
@@ -196,5 +197,6 @@ function fill(){
         }
         }).mount();
 }
+
 
 
