@@ -303,31 +303,39 @@ body{
     background-color: #4d2c91;
   }
   .product_board{
-    height:90%;
-    width:80%;
-    background-color: rgba(250,205,200,0.4);
-    backdrop-filter: saturate(180%) blur(10px);
+    position:fixed;
+    Z-index:99;
+    height:100%;
+    width:100%;
+    margin:0px auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  @supports(-webkit-backdrop-filter: none) or (backdrop-filter: none){
-    #product_board{
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-        background-color: rgba(250,205,200,0.4);
-    }
-  }
-  .products_list{
-    height: 85%;
-    width: 100%;
+  .product_list{
+    height: 90%;
+    width: 80%;
+    border-radius:10px 10px;
     background-color: #7e308b;
     margin: 0px auto;
     overflow: scroll;
     display: flex;
+    background-color: rgba(250,205,200,0.4);
+    backdrop-filter: saturate(180%) blur(10px);
     flex-direction: row;
     justify-content: center;
     -ms-overflow-style: none;
     scrollbar-width: none; 
 }
-.products_list::-webkit-scrollbar {
+@supports(-webkit-backdrop-filter: none) or (backdrop-filter: none){
+  #product_list{
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      background-color: rgba(250,205,200,0.4);
+  }
+}
+.product_list::-webkit-scrollbar {
   display: none;
 }
 /*--------------------------------------footer section-------------------------------*/
