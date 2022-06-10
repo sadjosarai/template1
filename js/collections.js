@@ -182,62 +182,21 @@ document.querySelector('#close-btn').onclick=()=>{
 function create_products_board(){
     let product_board=document.createElement('div');
     product_board.classList.add('product_board');
-    document.querySelector('body').appendChild(product_board);
     let product_list=document.createElement('div');
     product_list.classList.add('product_list');
-    document.querySelector('.product_board').appendChild(product_list);
-}
-function fill_products(ev){
-    ev.preventDefault();
-    create_products_board();
-    let show=document.querySelector('.products-list');
-    console.log(ev.target.parentElement.parentElement);
-    let collection_name=ev.target.parentElement.parentElement.document.querySelector('.collection_name').document.querySelector('h2').innerText;
-    for(let prod of products){
-        if(prod.collections===collection_name){
-            let e=document.createElement('div');
-            let i=document.createElement('img');
-            let d2=document.createElement('div');
-            let d3=document.createElement('div');
-            let input=document.createElement('input');
-            input.value='0';
-            let h=document.createElement('h5');
-            d3.classList.add('card-title');
-            let d4=document.createElement('div');
-            d4.classList.add('card-purchase-wrapper');
-            let q=document.createElement('span');
-            q.classList.add('badge','badge-pill','badge-secondary');
-            let s=document.createElement('span');
-            s.classList.add('badge','badge-info','badge-secondary');
-            let p=document.createElement('p');
-            let a=document.createElement('a');
-            s.classList.add('price');
-            s.innerText=prod.price+' XAF';
-            q.innerText=prod.quantity;
-            h.innerText=prod.name;
-            h.appendChild(q);
-            d3.appendChild(h);
-            d3.appendChild(s);
-            p.innerText=prod.details;
-            i.src=prod.image;
-            a.innerText='add to cart';
-            e.classList.add('card');
-            e.style.width="20rem";
-            d2.classList.add('card-body');
-            p.classList.add('card-text');
-            a.classList.add('btn');
-            a.classList.add('bg-ps');
-            d4.appendChild(input);
-            d4.appendChild(a);
-            d2.appendChild(d3);
-            d2.appendChild(p);
-            d2.appendChild(d4);
-            e.appendChild(i);
-            e.appendChild(d2);
-            show.appendChild(e);
-        }
+    let close_button=document.createElement('a');
+    close_button.href="#";
+    close_button.classList.add('close_button');
+    close_button.innerText="X";
+    product_list.appendChild(close_button);
+    product_board.appendChild(product_list);
+    document.querySelector('body').appendChild(product_board);
+    document.querySelector('.close_button').onclick=(e)=>{
+        e.preventDefault();
+        e.target.parentElement.parentElement.remove();
     }
 }
+
 document.querySelector("#see-more").addEventListener('click',(ev)=>{
     ev.preventDefault();
     create_products_board();
@@ -289,3 +248,6 @@ document.querySelector("#see-more").addEventListener('click',(ev)=>{
         }
     }
 });
+document.querySelector('.navbar-brand').onclick=()=>{
+    window.location.href="../index.html";
+}

@@ -76,12 +76,37 @@ body{
   display:flex;
   align-items: center;
   justify-content: center;
-  padding:0px 0px;
+  padding:0px 10px;
   background-color: #7e308b;
 }
-#navbarNav{
-  align-items: center;
+.navbar-brand{
+  display:flex;
   justify-content: center;
+  align-items: center;
+  height:100%;
+  margin-left: 20px;
+  cursor:pointer;
+}
+#company_logo{
+  height:50px;
+  width:50px;
+  border-radius:50%;
+  overflow:hidden;
+}
+#company_name img{
+  height:50px;
+  width:50px;
+}
+#company_name{
+  font-size:1.5em;
+  font-family:'Poppins';
+  color:white;
+  margin-left:10px;
+}
+#navbarNav{
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
   font-weight: 600;
   background-color: #7e308b;
 }

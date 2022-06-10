@@ -80,9 +80,34 @@ body{
   padding:0px 0px;
   background-color: #7e308b;
 }
-#navbarNav{
-  align-items: center;
+.navbar-brand{
+  display:flex;
   justify-content: center;
+  align-items: center;
+  height:100%;
+  margin-left: 20px;
+  cursor:pointer;
+}
+#company_logo{
+  height:50px;
+  width:50px;
+  border-radius:50%;
+  overflow:hidden;
+}
+#company_name img{
+  height:50px;
+  width:50px;
+}
+#company_name{
+  font-size:1.5em;
+  font-family:'Poppins';
+  color:white;
+  margin-left:10px;
+}
+#navbarNav{
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
   font-weight: 600;
   background-color: #7e308b;
 }
@@ -325,8 +350,74 @@ body{
     backdrop-filter: saturate(180%) blur(10px);
     flex-direction: row;
     justify-content: center;
+    align-items:center;
     -ms-overflow-style: none;
     scrollbar-width: none; 
+}
+.product_list .close_button{
+  position: absolute; 
+  background-color:rgb(0, 174, 255);
+  top: 3px; 
+  right: 3px;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  border-radius:50%;
+  opacity: 1;
+  z-index: 19;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card{
+  margin:10px 10px;
+  height:32rem;
+  width:20rem;
+}
+.card-title,
+.card-purchase-wrapper,
+.card-title h5,
+.card-title .price{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.price{
+  padding:10px 10px;
+}
+.card-purchase-wrapper input{
+  height: 50px;
+  width: 100px;
+  border-top:none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #7e308b;
+  outline:none;
+}
+.card-title h5{
+  font-size:1.2em;
+}
+.card img{
+  height: 16rem;
+  width: 20rem;;
+  margin:0px auto;
+}
+.card a.btn{
+  color:white;
+  font-family: 'Oleo script';
+  font-size: 1.3em;
+  width:150px;
+  height: 50px;
+  text-decoration: none;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 10px;
+}
+.card a.btn:hover{
+  color:white;
 }
 @supports(-webkit-backdrop-filter: none) or (backdrop-filter: none){
   #product_list{
