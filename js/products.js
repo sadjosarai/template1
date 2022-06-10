@@ -1,3 +1,22 @@
+//import {inputArray as dataForm, sInput as sexInput, ver as signedUp } from './modules/signup.js';
+window.onload=fill;
+let cart=document.querySelector(".chart");
+document.querySelector(".chart-button").onclick=(e)=>{
+    e.preventDefault();
+    if(cart.style.width!="0px"){
+        cart.style.width="0px";
+    }else{
+        if(window.innerWidth<="360"){
+            cart.style.width="100%";
+        }else{
+            cart.style.width="360px";
+        }
+    }
+};
+document.querySelector('#close-btn').onclick=(e)=>{
+    e.preventDefault();
+    cart.style.width="0px";
+};
 let products=[
     {
         name : "Product 1",
@@ -5,7 +24,8 @@ let products=[
         details:"nshgk zjhdj hzdhkjz kb , jkjghdejdh  jzdh kj  by nya naya nya hkdbjdbfefkefb kdfdk fbe kjdfk dfjefkjf kjdf djh df j",
         purchase : 10,
         price :12,
-        quantity : 25
+        quantity : 25,
+        collections: ''
     },
     {
         name : "Product 2",
@@ -101,6 +121,7 @@ let obj=[
     },
     
 ]
+
 function fill(){
     let glide=document.querySelector('.glide__track');
     let show=document.querySelector('.products-list');
@@ -175,6 +196,7 @@ function fill(){
             }
         }
         }).mount();
-    
 }
-window.onload=fill;
+
+
+
