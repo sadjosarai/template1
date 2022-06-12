@@ -182,26 +182,27 @@ document.querySelector('#close-btn').onclick=()=>{
 function create_products_board(){
     let product_board=document.createElement('div');
     product_board.classList.add('product_board');
+    let product_list_container=document.createElement('div');
+    product_list_container.classList.add('product_list_container');
     let product_list=document.createElement('div');
-    product_list.classList.add('product_list');
+    product_list.classList.add('product_list','row');
     let close_button=document.createElement('a');
     close_button.href="#";
     close_button.classList.add('close_button');
     close_button.innerText="X";
-    product_list.appendChild(close_button);
-    product_board.appendChild(product_list);
+    product_list_container.appendChild(close_button);
+    product_list_container.appendChild(product_list);
+    product_board.appendChild(product_list_container);
     document.querySelector('body').appendChild(product_board);
     document.querySelector('.close_button').onclick=(e)=>{
         e.preventDefault();
         e.target.parentElement.parentElement.remove();
     }
 }
-
 document.querySelector("#see-more").addEventListener('click',(ev)=>{
     ev.preventDefault();
     create_products_board();
     let show=document.querySelector('.product_list');
-    console.log(ev.target.parentElement.parentElement.querySelector('.collection-name'));
     let collection_name=ev.target.parentElement.parentElement.querySelector('.collection-name').querySelector('h2').innerText;
     for(let prod of products){
         if(prod.collections===collection_name){
@@ -251,3 +252,76 @@ document.querySelector("#see-more").addEventListener('click',(ev)=>{
 document.querySelector('.navbar-brand').onclick=()=>{
     window.location.href="../index.html";
 }
+document.querySelector('.left').onclick=()=>{
+    let show=document.querySelector('.collection-details');
+    let name=document.querySelector('.collection-details #details .collection-name h2');
+    let desc=document.querySelector('.collection-details #details .collection-description p');
+    let thumbs=document.querySelectorAll('.thumbnail');
+    let thumbs_array=[];
+    for(let n of thumbs){
+        thumbs_array.push(n);
+    }
+    var prev=0;
+    const index = thumbs_array.findIndex(el=>el.querySelector('h2').innerText===name.innerText);
+    if(index==0){
+        prev=thumbs_array.length-1;
+    }else{
+        prev=index-1; 
+    }
+    name.innerText=thumbs_array[prev].querySelector('h2').innerText;
+    desc.innerText=thumbs_array[prev].querySelector('p').innerText;
+    show.style.backgroundImage=thumbs_array[prev].style.backgroundImage;
+}
+document.querySelector('.right').onclick=()=>{
+    let show=document.querySelector('.collection-details');
+    let name=document.querySelector('.collection-details #details .collection-name h2');
+    let desc=document.querySelector('.collection-details #details .collection-description p');
+    let thumbs=document.querySelectorAll('.thumbnail');
+    let thumbs_array=[];
+    for(let n of thumbs){
+        thumbs_array.push(n);
+    }
+    var next=0;
+    const index = thumbs_array.findIndex(el=>el.querySelector('h2').innerText===name.innerText);
+    if(index==thumbs_array.length-1){
+        next=0;
+    }else{
+        next=index+1; 
+    }
+    name.innerText=thumbs_array[next].querySelector('h2').innerText;
+    desc.innerText=thumbs_array[next].querySelector('p').innerText;
+    show.style.backgroundImage=thumbs_array[next].style.backgroundImage;
+}
+let collection_details=document.querySelector('.collection-details');
+let details=collection_details.querySelector('#details');
+collection_details.onmouseover=()=>{
+    console.log("mouseover "+window.innerWidth);
+    if(window.innerWidth<=360){
+        details.style.height='50%';
+        details.style.transition='0.3s';
+        details.style.padding="5px 5px"
+    }else{
+        details.style.height='30%';
+        details.style.transition='0.3s';
+        details.style.padding="10px 10px"
+    }
+};
+collection_details.onmouseout=()=>{
+    let details=document.querySelector('#details');
+    details.style.height='0px';
+    details.style.transition='0.3s';
+    details.style.padding="0px 0px"
+};
+collection_details.onclick=()=>{
+    console.log(details.style.height);
+    if(details.style.height=="0px"){
+        details.style.height="30%";
+        details.style.transition='0.3s';
+        details.style.padding="10px 10px"
+    }else{
+        details.style.height="0";
+        details.style.transition='0.3s';
+        details.style.padding="0px 0px"
+    }
+
+};
